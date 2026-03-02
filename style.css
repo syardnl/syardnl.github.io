@@ -1,122 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* BLOG SECTION */
+.blog-section {
+    padding: 120px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-body {
-    background-color: #0d1117;
-    color: #e6edf3;
-    font-family: 'Courier New', monospace;
-    scroll-behavior: smooth;
+.post-card {
+    background: #161b22;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 1px solid #2a2f36;
+    transition: 0.3s;
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: #111;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    z-index: 1000;
+.post-card:hover {
+    transform: translateY(-5px);
 }
 
-nav h1 {
-    color: #00ff88;
+.summary {
+    margin: 10px 0;
+    color: #c9d1d9;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #e6edf3;
+.read-more {
     text-decoration: none;
-}
-
-nav a:hover {
     color: #00ff88;
+    font-weight: bold;
 }
 
-.section {
-    padding: 120px 40px;
-    min-height: 100vh;
+.read-more:hover {
+    color: white;
 }
 
-.hero {
-    text-align: center;
+/* WRITEUP PAGE */
+.writeup-section {
+    padding: 120px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-.hero h2 {
-    color: #00ff88;
+.meta {
+    color: #8b949e;
     margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #00ff88;
-    color: black;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: white;
-}
-
-.skill {
-    margin: 20px 0;
-}
-
-.bar {
-    background: #161b22;
-    height: 20px;
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: #00ff88;
-    animation: load 2s forwards;
-}
-
-.linux { width: 85%; }
-.ad { width: 75%; }
-.burp { width: 70%; }
-.privesc { width: 80%; }
-
-@keyframes load {
-    from { width: 0; }
-}
-
-.card {
-    background: #161b22;
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 4px solid #00ff88;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateX(10px);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-}
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     nav ul {
         flex-direction: column;
-        background: #111;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .blog-section,
+    .writeup-section {
+        padding: 100px 15px;
     }
 }
