@@ -1,8 +1,13 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #0d1117;
-    color: #00ff88;
-    font-family: "Courier New", monospace;
+    color: #e6edf3;
+    font-family: 'Courier New', monospace;
     scroll-behavior: smooth;
 }
 
@@ -10,67 +15,108 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #111;
+    background: #111;
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
-    box-sizing: border-box;
+    z-index: 1000;
 }
 
 nav h1 {
-    margin: 0;
+    color: #00ff88;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0;
 }
 
 nav a {
-    color: #00ff88;
+    color: #e6edf3;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: white;
+    color: #00ff88;
 }
 
 .section {
-    padding: 100px 40px;
+    padding: 120px 40px;
     min-height: 100vh;
 }
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
-.skill-box p {
-    background-color: #161b22;
-    padding: 10px;
-    margin: 8px 0;
-    border-left: 4px solid #00ff88;
+.hero h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00ff88;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
+
+.skill {
+    margin: 20px 0;
+}
+
+.bar {
+    background: #161b22;
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #00ff88;
+    animation: load 2s forwards;
+}
+
+.linux { width: 85%; }
+.ad { width: 75%; }
+.burp { width: 70%; }
+.privesc { width: 80%; }
+
+@keyframes load {
+    from { width: 0; }
 }
 
 .card {
-    background-color: #161b22;
+    background: #161b22;
     padding: 20px;
-    margin: 15px 0;
+    margin: 20px 0;
     border-left: 4px solid #00ff88;
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateX(10px);
-    background-color: #1c2128;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #111;
+    background: #111;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: #111;
+    }
 }
