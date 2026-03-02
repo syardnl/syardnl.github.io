@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Daniel | Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel | Cybersecurity Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <nav>
@@ -20,65 +22,91 @@
 
 <!-- HOME -->
 <section id="home" class="section hero">
-    <h2>Cybersecurity Student | CTF Player | CRTA Certified</h2>
-    <p>Documenting my journey into Red Teaming & Active Directory exploitation.</p>
+    <h2 id="typing"></h2>
+    <p>CRTA Certified | Active Directory Focus | Red Team Path</p>
+    <a href="#contact" class="btn">Hire Me</a>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
     <h2>About Me</h2>
     <p>
-        I am a Netcentric Computing student passionate about cybersecurity.
-        I actively participate in CTF challenges and continuously improve
-        my skills in penetration testing and Active Directory attacks.
+        I am a Netcentric Computing student focused on cybersecurity.
+        I actively participate in CTF competitions and document my journey
+        into Active Directory exploitation and red teaming.
     </p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="section">
     <h2>Skills</h2>
-    <div class="skill-box">
-        <p>Linux</p>
-        <p>Active Directory Enumeration</p>
-        <p>Burp Suite</p>
-        <p>Nmap & Network Scanning</p>
-        <p>Privilege Escalation</p>
-        <p>Web Exploitation</p>
+
+    <div class="skill">
+        <span>Linux</span>
+        <div class="bar"><div class="progress linux"></div></div>
     </div>
+
+    <div class="skill">
+        <span>Active Directory Attacks</span>
+        <div class="bar"><div class="progress ad"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>Burp Suite</span>
+        <div class="bar"><div class="progress burp"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>Privilege Escalation</span>
+        <div class="bar"><div class="progress privesc"></div></div>
+    </div>
+
 </section>
 
-<!-- CTF WRITEUPS -->
+<!-- WRITEUPS -->
 <section id="writeups" class="section">
     <h2>CTF Writeups</h2>
 
     <div class="card">
         <h3>TryHackMe - Pickle Rick</h3>
-        <p>Web exploitation challenge focusing on command injection and enumeration.</p>
+        <p>Web exploitation challenge involving command injection.</p>
     </div>
 
     <div class="card">
         <h3>picoCTF - Forensics</h3>
-        <p>Recovered hidden data and analyzed corrupted file artifacts.</p>
+        <p>Recovered hidden data and analyzed artifacts.</p>
     </div>
 
     <div class="card">
-        <h3>Custom AD Lab</h3>
-        <p>Simulated Active Directory attack chain from enumeration to privilege escalation.</p>
+        <h3>Active Directory Lab</h3>
+        <p>Full attack chain simulation from enumeration to DA compromise.</p>
     </div>
-
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
+    <p>Email: your@email.com</p>
     <p>GitHub: https://github.com/yourusername</p>
     <p>LinkedIn: https://linkedin.com/in/yourprofile</p>
 </section>
 
 <footer>
-    <p>© 2026 Daniel | Built with discipline & curiosity</p>
+    <p>© 2026 Daniel | Built with discipline & consistency</p>
 </footer>
+
+<script>
+const text = "Hi, I'm Daniel — Cybersecurity Student & CTF Player";
+let i = 0;
+function typingEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typingEffect, 50);
+    }
+}
+typingEffect();
+</script>
 
 </body>
 </html>
