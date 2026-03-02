@@ -1,65 +1,49 @@
-/* BLOG SECTION */
-.blog-section {
-    padding: 120px 20px;
-    max-width: 900px;
-    margin: auto;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Road | CTF Write-up</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
-.post-card {
-    background: #161b22;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    border: 1px solid #2a2f36;
-    transition: 0.3s;
-}
+<nav>
+    <h1><a href="../blog.html">← Back to Write-ups</a></h1>
+</nav>
 
-.post-card:hover {
-    transform: translateY(-5px);
-}
+<section class="post">
 
-.summary {
-    margin: 10px 0;
-    color: #c9d1d9;
-}
+    <h1>GreyCTF – Rainbow Road</h1>
+    <p class="date">01 Jun 2025</p>
 
-.read-more {
-    text-decoration: none;
-    color: #00ff88;
-    font-weight: bold;
-}
+    <p class="overview">
+        Created a web game hacking challenge with a dynamically changing maze.
+        This write-up explains the vulnerability and solving approach.
+    </p>
 
-.read-more:hover {
-    color: white;
-}
+    <h2>Overview</h2>
+    <p>
+        We are given a maze that changes every 5 seconds… [continue content]
+    </p>
 
-/* WRITEUP PAGE */
-.writeup-section {
-    padding: 120px 20px;
-    max-width: 900px;
-    margin: auto;
-}
+    <h2>Creation Process</h2>
+    <p>…describe how the challenge was designed…</p>
 
-.meta {
-    color: #8b949e;
-    margin-bottom: 20px;
-}
+    <h2>Exploit Strategy</h2>
+    <p>…describe exploitation steps…</p>
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    <h2>Lessons Learned</h2>
+    <ul>
+        <li>…first lesson</li>
+        <li>…second lesson</li>
+    </ul>
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
+</section>
 
-    .blog-section,
-    .writeup-section {
-        padding: 100px 15px;
-    }
-}
+<footer>
+    <p>© 2026 Daniel</p>
+</footer>
+
+</body>
+</html>
