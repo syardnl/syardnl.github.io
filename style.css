@@ -1,49 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rainbow Road | CTF Write-up</title>
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-<nav>
-    <h1><a href="../blog.html">← Back to Write-ups</a></h1>
-</nav>
+body {
+  background: #0f0f0f;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
 
-<section class="post">
+header {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+}
 
-    <h1>GreyCTF – Rainbow Road</h1>
-    <p class="date">01 Jun 2025</p>
+nav {
+  margin-top: 15px;
+}
 
-    <p class="overview">
-        Created a web game hacking challenge with a dynamically changing maze.
-        This write-up explains the vulnerability and solving approach.
-    </p>
+nav a {
+  color: #00ff99;
+  margin: 0 15px;
+  text-decoration: none;
+}
 
-    <h2>Overview</h2>
-    <p>
-        We are given a maze that changes every 5 seconds… [continue content]
-    </p>
+nav a:hover {
+  color: white;
+}
 
-    <h2>Creation Process</h2>
-    <p>…describe how the challenge was designed…</p>
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    <h2>Exploit Strategy</h2>
-    <p>…describe exploitation steps…</p>
+h2 {
+  margin-bottom: 20px;
+  color: #00ff99;
+}
 
-    <h2>Lessons Learned</h2>
-    <ul>
-        <li>…first lesson</li>
-        <li>…second lesson</li>
-    </ul>
+ul {
+  list-style: none;
+}
 
-</section>
+li {
+  padding: 8px 0;
+}
 
-<footer>
-    <p>© 2026 Daniel</p>
-</footer>
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
 
-</body>
-</html>
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
