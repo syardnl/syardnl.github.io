@@ -8,17 +8,44 @@ description: Cybersecurity notes, CTF writeups, and projects.
   <span class="eyebrow">CYBERSECURITY • CTF • PROJECTS</span>
   <h1>Hi, I'm <span>Amsyar.</span></h1>
   <p class="hero-lead">I document my journey through cybersecurity, CTFs, security labs, and the projects I build along the way.</p>
-  <div class="hero-actions">
-    <a class="button primary" href="{{ '/writeups/' | relative_url }}">Explore Writeups</a>
-    <a class="button" href="{{ '/projects/' | relative_url }}">View Projects</a>
+</section>
+
+<!-- LATEST COMPETITIONS SECTION -->
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">EVENTS</span>
+      <h2>Latest Competitions</h2>
+    </div>
+    <a class="text-link" href="{{ '/competitions/' | relative_url }}">View all →</a>
+  </div>
+
+  <div class="card-grid">
+    {% assign recent_competitions = site.competitions | sort: 'date' | reverse %}
+    {% for item in recent_competitions limit: 3 %}
+    <a class="card" href="{{ item.url | relative_url }}" style="overflow: hidden; padding: 0; display: flex; flex-direction: column;">
+      {% if item.image %}
+        <div class="card-image" style="width: 100%; height: 160px; overflow: hidden;">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+      {% endif %}
+      <div class="card-body" style="padding: 1.5rem;">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description | strip_html | truncate: 120 }}</p>
+      </div>
+    </a>
+    {% else %}
+    <div class="empty-state">No competitions added yet.</div>
+    {% endfor %}
   </div>
 </section>
 
+<!-- LATEST LAB WRITEUPS SECTION -->
 <section class="section">
   <div class="section-heading">
     <div>
       <span class="eyebrow">RECENT</span>
-      <h2>Latest writeups</h2>
+      <h2>Latest Lab writeups</h2>
     </div>
     <a class="text-link" href="{{ '/writeups/' | relative_url }}">View all →</a>
   </div>
@@ -33,14 +60,15 @@ description: Cybersecurity notes, CTF writeups, and projects.
       <div class="tags">{% for tag in item.tags limit: 3 %}<span>{{ tag }}</span>{% endfor %}</div>
     </a>
     {% else %}
-    <div class="empty-state">Your latest writeups will appear here.</div>
+    <div class="empty-state">No writeups added yet.</div>
     {% endfor %}
   </div>
 </section>
 
+<!-- PROJECTS SECTION -->
 <section class="section">
   <div class="section-heading">
-    <div><span class="eyebrow">BUILDING</span><h2>Projects</h2></div>
+    <div><span class="eyebrow">BUILDING</span><h2>Latest Projects</h2></div>
     <a class="text-link" href="{{ '/projects/' | relative_url }}">View all →</a>
   </div>
   <div class="card-grid">
@@ -52,7 +80,7 @@ description: Cybersecurity notes, CTF writeups, and projects.
       <div class="tags">{% for tech in project.tech limit: 4 %}<span>{{ tech }}</span>{% endfor %}</div>
     </a>
     {% else %}
-    <div class="empty-state">Add project files to <code>_projects/</code>.</div>
+    <div class="empty-state">No projects added yet.</div>
     {% endfor %}
   </div>
 </section>

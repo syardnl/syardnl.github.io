@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Circle Gradient -->
+    <radialGradient id="cyber-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </radialGradient>
+
+    <!-- Neon Visor Glow -->
+    <linearGradient id="visor-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffcc"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <!-- Hair Gradient -->
+    <linearGradient id="hair-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Background Base -->
+  <circle cx="256" cy="256" r="240" fill="url(#cyber-bg)" stroke="#10b981" stroke-width="8"/>
+
+  <!-- Background Anime Hair (Back) -->
+  <path d="M120 280 C100 380 160 460 160 460 L352 460 C352 460 412 380 392 280 Z" fill="url(#hair-grad)"/>
+
+  <!-- Hoodie / Jacket Shoulders -->
+  <path d="M120 480 Q256 420 392 480 L430 512 L82 512 Z" fill="#020617" stroke="#10b981" stroke-width="4"/>
+  <!-- Hoodie Zipper/Detail -->
+  <line x1="256" y1="440" x2="256" y2="512" stroke="#00ffcc" stroke-width="6"/>
+
+  <!-- Face Base -->
+  <path d="M176 200 Q256 160 336 200 Q340 310 256 370 Q172 310 176 200 Z" fill="#fde047" opacity="0.9"/> 
+
+  <!-- Anime Front Hair Bangs (Spiky Tech Look) -->
+  <path d="M160 190 L190 240 L220 170 L256 250 L290 170 L320 240 L352 190 Q370 110 256 90 Q142 110 160 190 Z" fill="url(#hair-grad)" stroke="#10b981" stroke-width="3"/>
+
+  <!-- Cyberpunk Glowing Visor (Goggles) -->
+  <polygon points="160,210 352,210 336,260 176,260" fill="url(#visor-glow)" rx="10"/>
+  <polygon points="160,210 352,210 336,260 176,260" fill="none" stroke="#ffffff" stroke-width="3"/>
+  
+  <!-- Visor Glow Reflection Line -->
+  <line x1="180" y1="220" x2="260" y2="220" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="320" cy="240" r="4" fill="#ffffff"/>
+
+  <!-- Cyber Mask / Mouth Guard -->
+  <path d="M206 300 L306 300 L286 345 L226 345 Z" fill="#0f172a" stroke="#00ffcc" stroke-width="3"/>
+  <!-- Mask Vents -->
+  <line x1="236" y1="320" x2="276" y2="320" stroke="#10b981" stroke-width="3"/>
+  <line x1="241" y1="330" x2="271" y2="330" stroke="#10b981" stroke-width="3"/>
+</svg>

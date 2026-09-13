@@ -10,9 +10,18 @@ collections:
   writeups:
     output: true
     permalink: /writeups/:path/
+  competitions:
+    output: true
+    permalink: /competitions/:path/
   projects:
     output: true
     permalink: /projects/:path/
+  certifications:
+    output: true
+    permalink: /certifications/:path/
+  tools:
+    output: true
+    permalink: /tools/:path/
 defaults:
   - scope:
       path: ""
