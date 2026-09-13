@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</head>
+<body>
+  <button class="mobile-menu" id="menuToggle" aria-label="Open navigation">☰</button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <div class="profile">
+        <img src="{{ '/assets/images/nagumo.avif' | relative_url }}" alt="Amsyar profile photo" class="profile-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="avatar-fallback">A</div>
+        <h2>Amsyar</h2>
+        <p>Cybersecurity Enthusiast</p>
+      </div>
+
+      <nav class="nav">
+        <a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}"><span>⌂</span> Home</a>
+        <a class="{% if page.url == '/writeups/' %}active{% endif %}" href="{{ '/writeups/' | relative_url }}"><span>⚔</span> CTF Writeups</a>
+
+        <button class="nav-section-toggle" id="categoryToggle" aria-expanded="true">
+          <span><span>▦</span> Categories</span><b>⌄</b>
+        </button>
+        <div class="nav-submenu" id="categoryMenu">
+          <a href="{{ '/writeups/#tryhackme' | relative_url }}">TryHackMe</a>
+          <a href="{{ '/writeups/#hackthebox' | relative_url }}">Hack The Box</a>
+          <a href="{{ '/writeups/#hacksmarter' | relative_url }}">HackSmarter</a>
+          <a href="{{ '/writeups/#other' | relative_url }}">Other CTF</a>
+        </div>
+
+        <a class="{% if page.url contains '/projects' %}active{% endif %}" href="{{ '/projects/' | relative_url }}"><span>▣</span> Projects</a>
+        <a class="{% if page.url == '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}"><span>◎</span> About</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="socials">
+          <a href="www.linkedin.com/in/amsyardnl" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://github.com/syardnl" target="_blank" rel="noopener" aria-label="GitHub">⌘</a>
+          <a href="amsyardaniel04@gmail.com" aria-label="Email">✉</a>
+        </div>
+        <span class="copyright">© {{ 'now' | date: '%Y' }} syardnl</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    {{ content }}
+    <footer class="mobile-footer">Built with Markdown · GitHub Pages</footer>
+  </main>
+</body>
+</html>

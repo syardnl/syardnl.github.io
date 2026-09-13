@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="article">
+  <div class="article-header">
+    <div class="article-meta"><span class="platform">PROJECT</span></div>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+    <div class="tags">{% for tech in page.tech %}<span>{{ tech }}</span>{% endfor %}</div>
+    {% if page.github %}<a class="button primary" href="{{ page.github }}" target="_blank" rel="noopener">View on GitHub ↗</a>{% endif %}
+  </div>
+  <div class="prose">{{ content }}</div>
+</article>

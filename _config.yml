@@ -1,0 +1,26 @@
+title: "Amsyar | Cybersecurity"
+description: "Cybersecurity notes, CTF writeups, machines, and projects."
+url: "https://amsyar.github.io"
+baseurl: ""
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+collections:
+  writeups:
+    output: true
+    permalink: /writeups/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+defaults:
+  - scope:
+      path: ""
+      type: "writeups"
+    values:
+      layout: writeup
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
