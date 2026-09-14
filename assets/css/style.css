@@ -264,3 +264,76 @@ h1,h2,h3{line-height:1.2}h1{font-size:clamp(42px,6vw,72px);letter-spacing:-.045e
 .project-actions {
   margin-top: 18px;
 }
+/* ================================
+   RESPONSIVE FIXES
+   ================================ */
+
+/* Tablet: collapse article grid earlier */
+@media (max-width: 860px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .toc {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  /* Article header */
+  .article-header {
+    padding: 12px 0 28px;
+  }
+  .article-header h1 {
+    font-size: clamp(28px, 7vw, 40px);
+    margin: 10px 0;
+  }
+
+  /* Page header (writeups list, projects list, etc.) */
+  .page-header {
+    padding: 14px 0 22px;
+  }
+  .page-header h1 {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  /* Hero */
+  .hero-lead {
+    font-size: 16px;
+  }
+
+  /* Prose: prevent full-page horizontal scroll from wide code */
+  .prose pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+    word-break: normal;
+  }
+
+  /* Article layout: single column */
+  .article-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 24px;
+  }
+
+  /* Card grid already goes 1-col — keep it */
+
+  /* Filter bar full width on mobile */
+  .filter-bar input {
+    font-size: 16px; /* prevents iOS zoom-on-focus */
+  }
+
+  /* Buttons wrap nicely */
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Writeup content padding */
+  .article {
+    padding-bottom: 40px;
+  }
+}
