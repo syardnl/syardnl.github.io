@@ -7,7 +7,7 @@ permalink: /competitions/
 <div class="page-header">
   <span class="eyebrow">COMPETITIONS</span>
   <h1>CTF Competitions</h1>
-  <p>CTF events and competitions I participated in.</p>
+  <p>Some of CTF challenge that I manage to solve. I tried my best to produce good writeup but I have lot of skill issue :(</p>
 </div>
 
 <div class="card-grid">

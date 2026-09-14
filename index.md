@@ -5,9 +5,12 @@ description: Cybersecurity notes, CTF writeups, and projects.
 ---
 
 <section class="hero">
-  <span class="eyebrow">CYBERSECURITY • CTF • PROJECTS</span>
-  <h1>Hi, I'm <span>Amsyar.</span></h1>
-  <p class="hero-lead">I document my journey through cybersecurity, CTFs, security labs, and the projects I build along the way.</p>
+  <span class="eyebrow">Cybersecurity • Web • Mobile</span>
+  <h1><span>Amsyar Daniel</span></h1>
+ <p class="hero-lead">
+  Welcome to my little corner of the internet. I keep my study journey, projects, and CTF writeups here — because I have a terrible memory and always need somewhere to look back. HAHAHA.
+</p>
+  
 </section>
 
 <!-- LATEST COMPETITIONS SECTION -->
@@ -82,16 +85,59 @@ description: Cybersecurity notes, CTF writeups, and projects.
     </div>
     <a class="text-link" href="{{ '/projects/' | relative_url }}">View all →</a>
   </div>
+
   <div class="card-grid">
+
     {% for project in site.projects limit: 3 %}
-    <a class="card project-card" href="{{ project.url | relative_url }}">
-      <div class="project-icon">{{ project.icon | default: '⌘' }}</div>
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.description }}</p>
-      <div class="tags">{% for tech in project.tech limit: 4 %}<span>{{ tech }}</span>{% endfor %}</div>
-    </a>
+
+    <div class="card project-card">
+
+      {% if project.image %}
+      <div class="project-image">
+        <img
+          src="{{ project.image | relative_url }}"
+          alt="{{ project.title }} project preview"
+          loading="lazy">
+      </div>
+      {% endif %}
+
+      <div class="project-content">
+
+        <h3>{{ project.title }}</h3>
+
+        <p>{{ project.description }}</p>
+
+        {% if project.tech %}
+        <div class="tags">
+          {% for tech in project.tech limit: 4 %}
+            <span>{{ tech }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if project.github %}
+        <div class="project-actions">
+          <a
+            class="button primary"
+            href="{{ project.github }}"
+            target="_blank"
+            rel="noopener noreferrer">
+            View on GitHub ↗
+          </a>
+        </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+
     {% else %}
-    <div class="empty-state">No projects added yet.</div>
+
+    <div class="empty-state">
+      No projects added yet.
+    </div>
+
     {% endfor %}
+
   </div>
 </section>

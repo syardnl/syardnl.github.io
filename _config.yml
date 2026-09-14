@@ -8,6 +8,7 @@ plugins:
   - jekyll-feed
 include:
   - _pages
+
 collections:
   writeups:
     output: true
@@ -16,7 +17,7 @@ collections:
     output: true
     permalink: /competitions/:path/
   projects:
-    output: true
+    output: false
     permalink: /projects/:path/
   certifications:
     output: true
@@ -35,3 +36,4 @@ defaults:
       type: "projects"
     values:
       layout: project
+
