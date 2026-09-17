@@ -10,12 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
   backdrop?.addEventListener('click', closeMenu);
   document.querySelectorAll('.sidebar a').forEach(a => a.addEventListener('click', closeMenu));
 
-  categoryToggle?.addEventListener('click', () => {
-    const open = categoryToggle.getAttribute('aria-expanded') === 'true';
-    categoryToggle.setAttribute('aria-expanded', String(!open));
-    categoryMenu.style.display = open ? 'none' : 'flex';
-    categoryToggle.querySelector('b').textContent = open ? '›' : '⌄';
-  });
+categoryToggle?.addEventListener('click', () => {
+  const isOpen =
+    categoryToggle.getAttribute('aria-expanded') === 'true';
+
+  categoryToggle.setAttribute(
+    'aria-expanded',
+    String(!isOpen)
+  );
+
+  categoryMenu.classList.toggle('open', !isOpen);
+
+  categoryToggle.querySelector('b').textContent =
+    !isOpen ? '⌄' : '›';
+});
 
   const search = document.getElementById('writeupSearch');
   const items = [...document.querySelectorAll('.searchable-item')];

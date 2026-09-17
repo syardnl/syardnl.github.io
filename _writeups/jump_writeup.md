@@ -2,6 +2,7 @@
 layout: writeup
 title: "Jump"
 platform: "TryHackMe"
+machine: "Linux"
 image: "/assets/images/jump_thm.png"
 difficulty: "Easy"
 date: 2026-09-14
@@ -13,9 +14,6 @@ tags:
   - Privilege Escalation
   - Lateral Movement
   - PATH Hijacking
-  - Cron
-  - GTFOBins
-  - pspy
 ---
 
 # Jump — TryHackMe Write-up
