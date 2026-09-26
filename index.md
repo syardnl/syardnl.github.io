@@ -20,7 +20,6 @@ description: Cybersecurity notes, CTF writeups, and projects.
       <span class="eyebrow">EVENTS</span>
       <h2>Latest Competitions</h2>
     </div>
-    <a class="text-link" href="{{ '/competitions/' | relative_url }}">View all →</a>
   </div>
   <div class="card-grid">
     {% assign recent_competitions = site.competitions | sort: 'date' | reverse %}
@@ -49,7 +48,6 @@ description: Cybersecurity notes, CTF writeups, and projects.
       <span class="eyebrow">RECENT</span>
       <h2>Latest Lab Writeups</h2>
     </div>
-    <a class="text-link" href="{{ '/writeups/' | relative_url }}">View all →</a>
   </div>
   <div class="card-grid">
     {% assign recent = site.writeups | sort: 'date' | reverse %}
@@ -83,7 +81,6 @@ description: Cybersecurity notes, CTF writeups, and projects.
       <span class="eyebrow">BUILDING</span>
       <h2>Latest Projects</h2>
     </div>
-    <a class="text-link" href="{{ '/projects/' | relative_url }}">View all →</a>
   </div>
 
   <div class="card-grid">
